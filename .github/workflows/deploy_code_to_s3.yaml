@@ -29,4 +29,5 @@ jobs:
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
           aws_bucket: ${{ env.AWS_S3_BUCKET_NAME }}
           source_dir: 'code'
+          destination_dir: ''
 
