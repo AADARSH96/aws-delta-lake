@@ -1,0 +1,28 @@
+name: AWS Code Deploy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      AWS_DEFAULT_REGION: us-east-1
+      AWS_S3_BUCKET_NAME: mf-code-bucket
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Build
+        run: zip -r code.zip src
+
+      - name: Configure AWS credentials and Upload to s3
+        uses: shallwefootball/s3-upload-action@master
+        id: S3
+        with:
+          aws_key_id: ${{ secrets.AWS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
+          aws_bucket: ${{ env.AWS_BUCKET }}
+          source_dir: 'code.zip'
+
