@@ -17,8 +17,9 @@ jobs:
       - name: Build
         run: |
           zip -r code.zip src
-          ls -lrt
-          pwd
+          mkdir code
+          cp code.zip code
+          ls -lrt 
 
       - name: Configure AWS credentials and Upload to s3
         uses: shallwefootball/s3-upload-action@master
