@@ -6,7 +6,8 @@ def create_iceberg_db(spark, iceberg_db):
     spark.sql(f"CREATE DATABASE IF NOT EXISTS {iceberg_db}")
 
 
-def create_iceberg_table(spark, iceberg_db, iceberg_table, iceberg_table_schema, s3_path, partition_column):
+def create_iceberg_table(spark, iceberg_db, iceberg_table, iceberg_table_schema, iceberg_table_path, partition_column):
+    s3_path =
     spark.sql(f"""CREATE TABLE  {iceberg_db}.{iceberg_table} (
     {iceberg_table_schema}
     )

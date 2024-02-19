@@ -7,6 +7,7 @@
     "date date, nav decimal(10,4), dayChange decimal(10,4), scheme_code integer, fund_house string, scheme_type string, scheme_category string,scheme_name string"
   ],
   "mf_table_partition" : "scheme_code",
+  "mf_table_bucket": "mf-data-bucket"
   ,
   "mf_list": [
     "100175",
