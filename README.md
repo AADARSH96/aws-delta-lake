@@ -2,29 +2,6 @@
 File: README.md
 ================================================
 
-Directory structure:
-└── aadarsh96-aws-delta-lake/
-    ├── README.md
-    ├── __init__.py
-    ├── create_env.sh
-    ├── requirements.txt
-    ├── src/
-    │   ├── __init__.py
-    │   ├── daily_load.py
-    │   ├── history_load.py
-    │   ├── analytics/
-    │   │   └── __init__.py
-    │   ├── config/
-    │   │   ├── __init__.py
-    │   │   └── api_config.json
-    │   └── utils/
-    │       ├── __init__.py
-    │       ├── common_utils.py
-    │       └── spark_utils.py
-    └── .github/
-        └── workflows/
-            └── deploy_code_to_s3.yaml
-
 
 ## What is Apache Iceberg?
 Apache Iceberg is a distributed, community-driven, Apache 2.0-licensed, 100% open-source data table format that helps simplify data processing on large datasets stored in data lakes. Data engineers use Apache Iceberg because it is fast, efficient, and reliable at any scale and keeps records of how datasets change over time. Apache Iceberg offers easy integrations with popular data processing frameworks such as Apache Spark, Apache Flink, Apache Hive, Presto, and more.
